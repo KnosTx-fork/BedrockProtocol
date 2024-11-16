@@ -42,8 +42,8 @@ class NetworkSettingsPacket extends DataPacket implements ClientboundPacket{
 		$result->compressionThreshold = $compressionThreshold;
 		$result->compressionAlgorithm = $compressionAlgorithm;
 		$result->enableClientThrottling = $enableClientThrottling;
-		$result->clientThrottleThreshold = $clientThrottleThreshold;
-		$result->clientThrottleScalar = $clientThrottleScalar;
+		$result->clientOThreshold = $clientOThreshold;
+		$result->clientOScalar = $clientOScalar;
 		return $result;
 	}
 
