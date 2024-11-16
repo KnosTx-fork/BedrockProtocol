@@ -12,6 +12,6 @@ parameters:
 
 
 		-
-			message: "#^Parameter \\#1 \\$packet of method .* expects .*PlayerActionPacket.*UIDataPacket given\\.$#"
+			message: "#^Parameter \\#1 \\$packet of method pocketmine\\\\network\\\\mcpe\\\\protocol\\\\PacketHandlerInterface\\:\\:handlePlayerAction\\(\\) expects pocketmine\\\\network\\\\mcpe\\\\protocol\\\\PlayerActionPacket, $this(pocketmine\\\\network\\\\mcpe\\\\protocol\\\\UIDataPacket) given\\.$#"
 			count: 1
 			path: ../../../src/UIDataPacket.php
