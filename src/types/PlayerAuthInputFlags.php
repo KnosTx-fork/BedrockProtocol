@@ -111,5 +111,6 @@ final class PlayerAuthInputFlags{
 	public const IS_ROT_CONTROLLED_BY_MOVE_DIRECTION = 55;
 	public const START_SPIN_ATTACK = 56;
 	public const STOP_SPIN_ATTACK = 57;
+	public const OPEN_UI = 58;
 
 }
