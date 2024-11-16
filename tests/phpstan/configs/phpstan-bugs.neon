@@ -9,3 +9,9 @@ parameters:
 			message: "#^Parameter \\#3 \\$packets of static method pocketmine\\\\network\\\\mcpe\\\\protocol\\\\serializer\\\\PacketBatch\\:\\:encodePackets\\(\\) expects array\\<int, pocketmine\\\\network\\\\mcpe\\\\protocol\\\\Packet\\>, array\\<int\\|string, pocketmine\\\\network\\\\mcpe\\\\protocol\\\\Packet\\> given\\.$#"
 			count: 1
 			path: ../../../src/serializer/PacketBatch.php
+
+
+		-
+			message: "#^Parameter \\#1 \\$packet of method .* expects .*PlayerActionPacket.*UIDataPacket given\\.$#"
+			count: 1
+			path: ../../../src/UIDataPacket.php
