@@ -33,7 +33,7 @@ class UIDataPacket extends Packet {
 
 	/**
 	 * Encode payload to send packet
-	 */
+  	 */
 	protected function encodePayload(PacketSerializer $out) : void {
 		$out->putString($this->formId);
 		$out->putString($this->formData);
