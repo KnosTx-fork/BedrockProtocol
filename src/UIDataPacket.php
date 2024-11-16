@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of BedrockProtocol.
  * Copyright (C) 2014-2022 PocketMine Team <https://github.com/pmmp/BedrockProtocol>
  *
@@ -24,6 +24,16 @@ class UIDataPacket extends DataPacket{
 	public string $formData;
 
 	/**
+	 * @generate-create-func
+	 */
+	public static function create(string $formId, string $formData) : self{
+		$result = new self;
+		$result->formId = $formId;
+		$result->formData = $formData;
+		return $result;
+	}
+
+	/**
 	 * Decode payload from client packet
  	 */
 	protected function decodePayload(PacketSerializer $in) : void {
@@ -40,7 +50,7 @@ class UIDataPacket extends DataPacket{
 	}
 
 	/**
-	 * Get the network ID of the packet
+ 	 * Get the network ID of the packet
  	 */
 	public function getNetworkId() : int{
 		return self::NETWORK_ID;
