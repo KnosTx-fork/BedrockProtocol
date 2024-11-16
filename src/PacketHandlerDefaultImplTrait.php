@@ -837,4 +837,8 @@ trait PacketHandlerDefaultImplTrait{
 	public function handleSetMovementAuthority(SetMovementAuthorityPacket $packet) : bool{
 		return false;
 	}
+
+	public function handleUIData(UIDataPacket $packet) : bool{
+		return false;
+	}
 }

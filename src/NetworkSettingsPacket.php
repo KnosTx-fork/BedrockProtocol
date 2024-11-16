@@ -31,19 +31,19 @@ class NetworkSettingsPacket extends DataPacket implements ClientboundPacket{
 	private int $compressionThreshold;
 	private int $compressionAlgorithm;
 	private bool $enableClientThrottling;
-	private int $clientThrottleThreshold;
-	private float $clientThrottleScalar;
+	private int $clientOThreshold;
+	private float $clientOScalar;
 
 	/**
 	 * @generate-create-func
 	 */
-	public static function create(int $compressionThreshold, int $compressionAlgorithm, bool $enableClientThrottling, int $clientThrottleThreshold, float $clientThrottleScalar) : self{
+	public static function create(int $compressionThreshold, int $compressionAlgorithm, bool $enableClientThrottling, int $clientOThreshold, float $clientOScalar) : self{
 		$result = new self;
 		$result->compressionThreshold = $compressionThreshold;
 		$result->compressionAlgorithm = $compressionAlgorithm;
 		$result->enableClientThrottling = $enableClientThrottling;
-		$result->clientThrottleThreshold = $clientThrottleThreshold;
-		$result->clientThrottleScalar = $clientThrottleScalar;
+		$result->clientOThreshold = $clientOThreshold;
+		$result->clientOScalar = $clientOScalar;
 		return $result;
 	}
 
@@ -62,24 +62,24 @@ class NetworkSettingsPacket extends DataPacket implements ClientboundPacket{
 
 	public function isEnableClientThrottling() : bool{ return $this->enableClientThrottling; }
 
-	public function getClientThrottleThreshold() : int{ return $this->clientThrottleThreshold; }
+	public function getClientOThreshold() : int{ return $this->clientOThreshold; }
 
-	public function getClientThrottleScalar() : float{ return $this->clientThrottleScalar; }
+	public function getClientOScalar() : float{ return $this->clientOScalar; }
 
 	protected function decodePayload(PacketSerializer $in) : void{
 		$this->compressionThreshold = $in->getLShort();
 		$this->compressionAlgorithm = $in->getLShort();
 		$this->enableClientThrottling = $in->getBool();
-		$this->clientThrottleThreshold = $in->getByte();
-		$this->clientThrottleScalar = $in->getLFloat();
+		$this->clientOThreshold = $in->getByte();
+		$this->clientOScalar = $in->getLFloat();
 	}
 
 	protected function encodePayload(PacketSerializer $out) : void{
 		$out->putLShort($this->compressionThreshold);
 		$out->putLShort($this->compressionAlgorithm);
 		$out->putBool($this->enableClientThrottling);
-		$out->putByte($this->clientThrottleThreshold);
-		$out->putLFloat($this->clientThrottleScalar);
+		$out->putByte($this->clientOThreshold);
+		$out->putLFloat($this->clientOScalar);
 	}
 
 	public function handle(PacketHandlerInterface $handler) : bool{
