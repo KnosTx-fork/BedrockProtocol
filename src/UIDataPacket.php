@@ -16,7 +16,7 @@ namespace pocketmine\network\mcpe\protocol;
 
 use pocketmine\network\mcpe\protocol\serializer\PacketSerializer;
 
-class UIDataPacket extends DataPacket{
+class UIDataPacket extends DataPacket implements ClientboundPacket{
 	public const NETWORK_ID = ProtocolInfo::UI_DATA_PACKET;
 
 	public string $formId;
