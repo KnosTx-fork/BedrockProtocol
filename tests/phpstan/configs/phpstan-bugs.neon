@@ -1,14 +1,14 @@
 parameters:
 	ignoreErrors:
 		-
-			message: '#^Casting to string something that\'s already string\\.$#'
+			message: "#^Casting to string something that\'s already string\\.$#"
 			count: 1
 			path: '../../../src/AvailableCommandsPacket.php'
    		-
-			message: '#^Parameter \\#3 \\$packets of static method pocketmine\\\\network\\\\mcpe\\\\protocol\\\\serializer\\\\PacketBatch\\:\\:encodePackets\\(\\) expects array\\<int, pocketmine\\\\network\\\\mcpe\\\\protocol\\\\Packet\\>, array\\<int\\|string, pocketmine\\\\network\\\\mcpe\\\\protocol\\\\Packet\\> given\\.$#'
+			message: "#^Parameter \\#3 \\$packets of static method pocketmine\\\\network\\\\mcpe\\\\protocol\\\\serializer\\\\PacketBatch\\:\\:encodePackets\\(\\) expects array\\<int, pocketmine\\\\network\\\\mcpe\\\\protocol\\\\Packet\\>, array\\<int\\|string, pocketmine\\\\network\\\\mcpe\\\\protocol\\\\Packet\\> given\\.$#"
 			count: 1
 			path: '../../../src/serializer/PacketBatch.php'
 		-
-			message: '#^Parameter \\#1 \\$packet of method pocketmine\\\\network\\\\mcpe\\\\protocol\\\\PacketHandlerInterface\\:\\:handlePlayerAction\\(\\) expects pocketmine\\\\network\\\\mcpe\\\\protocol\\\\PlayerActionPacket\\>, string, pocketmine\\\\network\\\\mcpe\\\\protocol\\\\UIDataPacket\\> given\\.$#'
+			message: "#^Parameter \\#1 \\$packet of method pocketmine\\\\network\\\\mcpe\\\\protocol\\\\PacketHandlerInterface\\:\\:handlePlayerAction\\(\\) expects pocketmine\\\\network\\\\mcpe\\\\protocol\\\\PlayerActionPacket\\>, string, pocketmine\\\\network\\\\mcpe\\\\protocol\\\\UIDataPacket\\> given\\.$#"
 			count: 1
 			path: '../../../src/UIDataPacket.php'
