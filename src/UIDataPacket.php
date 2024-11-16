@@ -35,7 +35,7 @@ class UIDataPacket extends DataPacket implements ClientboundPacket{
 
 	/**
 	 * Decode payload from client packet
- 	 */
+	 */
 	protected function decodePayload(PacketSerializer $in) : void {
 		$this->formId = $in->getString();
 		$this->formData = $in->getString();
@@ -43,17 +43,10 @@ class UIDataPacket extends DataPacket implements ClientboundPacket{
 
 	/**
 	 * Encode payload to send packet
-  	 */
+	 */
 	protected function encodePayload(PacketSerializer $out) : void {
 		$out->putString($this->formId);
 		$out->putString($this->formData);
-	}
-
-	/**
- 	 * Get the network ID of the packet
- 	 */
-	public function getNetworkId() : int{
-		return self::NETWORK_ID;
 	}
 
 	public function handle(PacketHandlerInterface $handler) : bool{
