@@ -57,6 +57,6 @@ class UIDataPacket extends DataPacket implements ClientboundPacket{
 	}
 
 	public function handle(PacketHandlerInterface $handler) : bool{
-		return $handler->handlePlayerAction($this);
+		return $handler->handleUIData($this);
 	}
 }
