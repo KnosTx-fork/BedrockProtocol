@@ -23,7 +23,7 @@ class UIDataPacket extends Packet {
 
 	public string $formData;
 
-	/** 
+	/**
 	 * Decode payload from client packet
  	 */
 	protected function decodePayload(PacketSerializer $in) : void {
@@ -41,7 +41,7 @@ class UIDataPacket extends Packet {
 
 	/**
 	 * Get the network ID of the packet
- 	 */	
+ 	 */
 	public function getNetworkId() : int{
 		return self::NETWORK_ID;
 	}
